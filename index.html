@@ -1,0 +1,393 @@
+
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Portfolio</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/product/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+     .video-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 aspect ratio (divide 9 by 16 = 0.5625) */
+    }
+
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+      .navbar {
+        background-color: #292929;
+    color: #fff;
+    padding: 0px;
+  }
+      
+
+      .img-responsive {
+        max-width: 80%; /* Ensure the image never exceeds its parent container's width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline styling */
+    margin: 0 auto; /* Center the image horizontally */
+}
+    
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
+  </symbol>
+  <symbol id="cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+  </symbol>
+</svg>
+
+  
+    <div class="navbar">
+      <h5>My Portfolio</h5>
+      <h6>Projects</h6>
+    </div>
+           
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <main>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+            <img src="IMG_5256.jpeg" alt="picture of me" class="img-responsive"></img><br>
+            <h4 class="fw-normal text-muted mb-3">The works of a student studying Web Design</h4>
+          </div>
+          <div class="col-md-6 order-md-1">
+
+            <h1 class="fw-normal text mb-3">Katelen Valdez</h1>
+            <h1 class="fw-normal text-muted mb-3">About Me</h1>
+            <p class="lead">I'm Katelen Valdez, a passionate web design student dedicated to creating engaging and user-friendly digital experiences. My journey into web design began with a curiosity for technology and a desire to blend creativity with functionality.</p>
+            <p class="lead">With a keen eye for design and a strong foundation in HTML, CSS, and JavaScript, I strive to craft websites and applications that not only look beautiful but also deliver seamless functionality and optimal user experience.</p>
+            <p class="lead">Driven by a constant desire to learn and grow, I am always exploring new technologies and design trends to stay ahead in the ever-evolving field of web development. Whether it's building responsive layouts, optimizing performance, or experimenting with new frameworks, I'm always up for a challenge.</p>
+            <p class="lead">When I'm not coding, you can find me exploring nature, working out at the gym, or trying new coffee shops. I believe that inspiration can be found everywhere, and I draw from diverse experiences to fuel my creativity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+         
+      
+      </div>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-76 my-md-3 ps-md-3">
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+            <h2 class="display-5">React Native Todo App</h2>
+            <p class="lead">This TODO app, streamlines task management and enhances productivity through intuitive task creation, organization, and completion features.
+              Employing React Native, Expo, and React Navigation, I developed Taskly's frontend, integrating components like FlatList for efficient task rendering and React Native Elements for UI elements. Additionally, I utilized async-storage for data persistence, ensuring seamless user experience across sessions.
+              One challenge was implementing task organization by time and date, including categorizing tasks into "completed" and "tasks due soon" categories. This was addressed by leveraging FlatList's flexibility to dynamically render tasks based on their completion status and deadline, ensuring effective task tracking and prioritization.
+              The The use of different colors for each task, including red for completed tasks, enhances visual distinction and aids users in quickly identifying and prioritizing tasks.
+            </p>
+        </div>
+        <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <video controls style="width: 100%; height: 100%;">
+                <source src="gif1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+            <h2 class="display-5">Dinner Menu</h2>
+            <p class="lead">This project aims to create a data-driven menu page using React. It involves building components to display menu items dynamically based on provided data. 
+            <br>React and Javascipt libraries were used for building interfaces and React components were used to render the items. One problem encountered was dynamically rendering each menu item without hardcoding the item. This was solved by using the map method to iterate over the items and generate components based on the data 
+             A pink color scheme was chosen for the menu to create a visually appealing and distinctive interface.</p>
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <img src="gif2.png" alt="Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </div>
+</div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+            <h2 class="display-5">Exercise App Wireframe Design</h2>
+            <p class="lead">TThe project aimed to design wireframes for an exercise app, featuring a main screen displaying three exercises, along with distinct screens for duration and repetition exercises, each providing intuitive controls for effective user interaction. Utilizing a design tool like Figma,
+               I focused on understanding user interface design principles, layout structuring, and visual hierarchy establishment. 
+              One challenge encountered was designing distinct screens for duration and repetition exercises while ensuring consistency in user experience. This was addressed by maintaining a clear layout and incorporating intuitive controls specific to each exercise type. 
+              In terms of design decisions, I opted for a clean and minimalist layout to prioritize user focus on exercise details, prominently displaying exercise names for quick identification and incorporating intuitive controls for ease of use. 
+              Additionally, I chose a color scheme with subtle accents to enhance visual appeal without distracting from the main content.</p>
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <video controls style="width: 100%; height: 100%;">
+                <source src="gif3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+            <h2 class="display-5">Exercise App</h2>
+            <p class="lead">The purpose of this project is to create a simple Exercise Tracker application where users 
+              can select exercises from a menu and track their repetitions or duration. React was used to build the application, and functional
+              components were implemented too create Repetition and Duration exercise functionalities. One problem was updating each component
+              based on user interactions. This was solved by using React's state management system to track and update values.
+              A blue color scheme was chosen for its calming, universally appealing, and professional qualities, aligning with the application's purpose of promoting user trust and readability in tracking exercise routines.
+            </p>
+        </div>
+        <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <video controls style="width: 100%; height: 100%;">
+                <source src="gif4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+            <h2 class="display-5">FlashCard Study App Design</h2>
+            <p class="lead">This project is a native mobile application designed to facilitate efficient and engaging flashcard studying. With features like flashcard creation, editing, deletion, and randomized display, users can enhance their learning experience and retention through interactive study sessions.
+              Leveraging Expo and React Native Elements, the app frontend was designed with a focus on intuitive UI design and seamless navigation. Figma was utilized for visual design, incorporating font, color, and button styles to enhance user experience and aesthetic appeal.
+              One challenge was implementing randomized display of flashcards while ensuring each card is shown only once. This was addressed by designing a UI flow that prioritizes efficient navigation and intuitive controls, allowing users to seamlessly access flashcards and track their study progress.
+              The design proritizes simplicity, with a clean interface or edtiing, creating, and deleting flashcards.Each flashcard features a prompt on one side and an answer on the other, enhancing study effectiveness
+            </p>
+        </div>
+        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <video controls style="width: 100%; height: 100%;">
+                <source src="gif5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+            <h2 class="display-5">Todo App Wireframe Design</h2>
+            <p class="lead">Taskly, designed in Figma, is a streamlined TODO app aimed at simplifying task management and user authentication through an intuitive interface.
+              Utilizing Figma, I crafted wireframes and refined the final design, applying user interface design principles, layout structuring, and color psychology to enhance 
+              the user experience. Specifically, I implemented features such as task creation, deletion, deadline setting, user authentication, and task completion functionalities.
+              A key challenge was seamlessly integrating essential functionalities while maintaining a clean and intuitive layout. This was resolved through meticulous organization of the interface and iterative usability testing.
+              Taskly's layout prioritizes ease of use and visual clarity, with a teal and gray color scheme chosen for its calming and professional aesthetic. 
+            </p>
+        </div>
+        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            <video controls style="width: 100%; height: 100%;">
+                <source src="gif6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      
+      <small class="d-block mb-3 text-body-secondary">&copy; 2024</small>
+    </div>
+    <div class="col-6 col-md">
+     
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Projects</a></li>
+        
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+      
+        <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
+       
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary text-decoration-none" href="#">Information</a></li>
+        
+        <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+        <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    </body>
+</html>
